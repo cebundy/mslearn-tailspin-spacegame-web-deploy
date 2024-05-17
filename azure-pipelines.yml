@@ -109,5 +109,5 @@ stages:
             inputs:
               azureSubscription: 'cx-win-dev-tooling(bf6f6b36-5e66-4cad-849b-ccb62323e785)'
               appType: 'webAppLinux'
-              appName: '$(WebAppNameDev)'
+              appName: '$(WebAppNameStaging)'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
