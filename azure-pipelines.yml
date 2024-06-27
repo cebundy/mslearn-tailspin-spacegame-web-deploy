@@ -84,7 +84,7 @@ stages:
             artifact: drop
           - task: AzureWebApp@1
             inputs:
-              azureSubscription: 'cx-win-dev-tooling(bf6f6b36-5e66-4cad-849b-ccb62323e785)'
+              azureSubscription: 'rm-service-connection'
               appType: 'webAppLinux'
               appName: '$(WebAppNameDev)'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
@@ -107,7 +107,7 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Azure App Service Deploy: website'
             inputs:
-              azureSubscription: 'cx-win-dev-tooling(bf6f6b36-5e66-4cad-849b-ccb62323e785)'
+              azureSubscription: 'rm-service-connection'
               appType: 'webAppLinux'
               appName: '$(WebAppNameStaging)'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
